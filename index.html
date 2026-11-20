@@ -33,9 +33,11 @@
         <h1>Ludovic Papin</h1>
         <p class="intro-text">I’m a mathematician and computer scientist interested in how mathematical ideas can help us understand software and data. My goal is to build predictive models grounded in theory, test them against real-world data and use the results to help communities make better decisions.</p>
       </div>
-      <figure>
-        <img src="assets/least-squares.webp" width="1200" height="688" alt="A wireframe bowl with a single minimum. Its level curves form ellipses on the plane below.">
-        <figcaption>Geometry of a least-squares error surface</figcaption>
+      <figure id="fisher-rao">
+        <a href="assets/fisher-rao-sphere.png" aria-label="View the Fisher–Rao probability sphere at full size">
+          <img src="assets/fisher-rao-sphere.png" width="1200" height="688" alt="On a curved patch of a sphere, a bright arc between two white points bows away from the dotted straight chord.">
+        </a>
+        <figcaption>Fisher–Rao probability sphere. The bright arc traces the shortest path on the surface between two probability distributions.</figcaption>
       </figure>
     </div>
     <section id="current-work" class="entry" aria-labelledby="work-heading">
@@ -44,12 +46,53 @@
         <h3>Data Science Project</h3>
         <p class="status">In progress</p>
       </div>
+      <div class="figure-pair">
+        <figure id="electricity-demand">
+          <a href="assets/electricity-demand-2019.png" aria-label="View the electricity-demand surface at full size">
+            <img src="assets/electricity-demand-2019.png" width="1200" height="688" loading="lazy" alt="Twelve monthly curves form ridges across a trading day from 08:00 to 07:30 Western Australian time. Height shows mean operational demand in megawatts.">
+          </a>
+          <figcaption>
+            <span class="figure-title">A year of electricity demand</span>
+            Each curve traces an average trading day for one month of 2019 on Western Australia’s South West Interconnected System. Height shows mean operational demand in megawatts.
+            <a href="https://data.wa.aemo.com.au/datafiles/operational-demand/operational-demand-2019.csv">Australian Energy Market Operator data (CSV)</a>
+          </figcaption>
+        </figure>
+        <figure id="least-squares">
+          <a href="assets/least-squares.webp" aria-label="View the least-squares bowl at full size">
+            <img src="assets/least-squares.webp" width="1200" height="688" loading="lazy" alt="A wireframe bowl with a single minimum. Its level curves form ellipses on the plane below.">
+          </a>
+          <figcaption>
+            <span class="figure-title">The least-squares bowl</span>
+            Each position on the horizontal plane represents a pair of model settings. The best fit sits at the bottom of the bowl, where the sum of squared errors is smallest.
+          </figcaption>
+        </figure>
+      </div>
     </section>
     <section id="background" class="entry" aria-labelledby="background-heading">
       <h2 id="background-heading">Background</h2>
       <div class="background-copy">
         <p>I studied pure mathematics at the University of New South Wales and the Australian National University. I later worked as a computer scientist and programmer at Australia’s Defence Science and Technology Group, applying that training to software design.</p>
         <p>My interests include mathematical modelling, optimisation and the use of formal methods in software engineering. I program in Python and Java.</p>
+      </div>
+      <div class="figure-pair">
+        <figure id="ellipsoid">
+          <a href="assets/principal-axis-ellipsoid.png" aria-label="View the principal-axis ellipsoid at full size">
+            <img src="assets/principal-axis-ellipsoid.png" width="1200" height="688" loading="lazy" alt="Three dotted segments meet at the centre of a stretched wireframe sphere and mark its perpendicular principal axes.">
+          </a>
+          <figcaption>
+            <span class="figure-title">Principal axes of an ellipsoid</span>
+            This linear map doubles a sphere’s width in one direction and shrinks it to 70% in another. The third direction keeps its original scale.
+          </figcaption>
+        </figure>
+        <figure id="tangent-plane">
+          <a href="assets/saddle-tangent-plane.png" aria-label="View the saddle and tangent plane at full size">
+            <img src="assets/saddle-tangent-plane.png" width="1200" height="688" loading="lazy" alt="A wireframe saddle passes above and below a small flat plane. A white dot marks their point of tangency.">
+          </a>
+          <figcaption>
+            <span class="figure-title">A saddle and its tangent plane</span>
+            At the white dot, the plane gives the local slope of the surface. Moving away from that point, the saddle rises in one direction and falls in another.
+          </figcaption>
+        </figure>
       </div>
     </section>
   </main>

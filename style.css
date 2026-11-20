@@ -68,8 +68,20 @@ h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 400; }
 h1 { font-size: clamp(4.2rem, 7.7vw, 7rem); line-height: .99; letter-spacing: -.046em; }
 .intro-text { margin: 1.45rem 0 0; max-width: 34rem; font-size: clamp(1.12rem, 1.55vw, 1.33rem); line-height: 1.58; color: #404542; }
 figure { margin: 0; min-width: 0; }
+figure > a { display: block; cursor: zoom-in; }
 figure img { width: 100%; height: auto; display: block; background: #191b1c; }
 figcaption { margin-top: .65rem; font-size: .85rem; line-height: 1.4; color: var(--muted); }
+
+.figure-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+.figure-pair figcaption { margin-top: .85rem; font-size: 1rem; line-height: 1.55; }
+.figure-title { display: block; margin-bottom: .25rem; font: 400 clamp(1.6rem, 2.3vw, 2rem)/1.12 var(--serif); color: var(--ink); }
+#electricity-demand figcaption a { display: block; width: fit-content; margin-top: .4rem; }
 
 .entry { display: grid; grid-template-columns: minmax(11rem, .45fr) 1fr; column-gap: 3rem; padding-block: clamp(2.2rem, 4.4vw, 4rem); border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
 #current-work { border-top: 2px solid var(--ink); }
@@ -88,7 +100,7 @@ footer small { font-size: .9rem; }
   .masthead-inner { min-height: 4.2rem; }
   .introduction { grid-template-columns: 1fr; gap: 2rem; padding-block: 3rem 2.5rem; }
   .intro-text { max-width: 38rem; }
-  figure { width: min(100%, 34rem); }
+  .introduction figure { width: min(100%, 34rem); }
   .entry { grid-template-columns: 1fr; row-gap: 1.05rem; }
   h2 { font: 600 .9rem/1.45 "DM Sans", system-ui, sans-serif; letter-spacing: .04em; }
 }
@@ -103,6 +115,10 @@ footer small { font-size: .9rem; }
   h1 { font-size: clamp(3.8rem, 14.5vw, 5rem); }
   .intro-text { margin-top: 1rem; }
   .project { flex-wrap: wrap; row-gap: .65rem; }
+}
+
+@media (max-width: 44rem) {
+  .figure-pair { grid-template-columns: 1fr; gap: 2rem; margin-top: .6rem; }
 }
 
 @media (max-width: 21rem) {
